@@ -43,7 +43,7 @@ def call_chatgpt_api(toshorten, outfilename):
         json.dump(response, file, indent=4)
 
 def get_direction():
-    return "The theme of the story is horror."
+    return ""
 
 def main():
     if len(sys.argv) != 2:

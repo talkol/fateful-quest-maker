@@ -222,11 +222,14 @@ This will create the directory for section 1. Inside, create the file `s1.in.jso
     "Background": "After a long journey by ship, you finally reach the coordinates where the uncharted island is supposed to be. Upon arrival, you find the hidden temple and inside find the legendary cursed golden skull. As you touch the skull, you realize that something feels wrong and there may be truth to the curse of legend.",
     "Scene": "While exploring the temple, you encounter a strange insect unlike anything you've ever seen - it appears to glow and hum whenever you get closer.",
     "Choice": "Will you attempt to catch the insect?",
-    "PositiveScene": 20
+    "PositiveScene": 20,
+    "Direction": ""
 }
 ```
 
-The content above is the one used for section 1 in my [example quest](https://fateful.quest). Change it to match your story. Background is a short background for the story up until the first scene in the section. Scene is the first scene of the section. Choice is the first choice given to the player in the section. Positive scene please ignore for now, just leave it on 20.
+The content above is the one used for section 1 in my [example quest](https://fateful.quest). Change it to match your story. `Background` is a short background for the story up until the first scene in the section. `Scene` is the first scene of the section. `Choice` is the first choice given to the player in the section. `PositiveScene` please ignore for now, just leave it on 20.
+
+Regarding `Direction`, you can also leave this field empty for now. In later sections, if you don't like the direction of the story and want to point it somewhere, you can add some general themes here, for example "time travel" or "horror".
 
 Play my [example quest](https://fateful.quest) to understand where this scene shows up. It shows up right after the prologue (that ends with the first choice of the game - whether to take the skull or not). This means the choice in the prompt for section 1 is the second choice in the game.
 
