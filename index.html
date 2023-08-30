@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fateful Quest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EE4VDQSWY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5EE4VDQSWY');
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Dogica Pixel';
+            src: URL('dogicapixel.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Dogica Pixel Bold';
+            src: URL('dogicapixelbold.ttf') format('truetype');
+        }
+        html {
+            font-family: 'Dogica Pixel';
+            font-size: 15px;
+            line-height: 22px;
+            max-width: 430px;
+            margin: auto;
+        }
+        @media (max-width: 430px) {
+            html {
+                background: url(home.png);
+                background-size: 100%;
+                image-rendering: pixelated;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: crisp-edges;
+            }
+        }
+        @media not (max-width: 430px) {
+            html {
+                background-color: #ddd;
+            }
+            body {
+                background: url(home.png);
+                background-size: 100%;
+                image-rendering: pixelated;
+                image-rendering: -moz-crisp-edges;
+                image-rendering: crisp-edges;
+            }
+        }
+        body {
+            touch-action: pan-x pan-y;
+            padding: 10px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 40px;
+            line-height: 60px;
+            font-family: 'Dogica Pixel Bold';
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px #000;
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
+        p.bold {
+            font-family: 'Dogica Pixel Bold';
+        }
+        #image {
+            width: 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(155, 85, 0)
+        }
+        .button {
+            margin-bottom: 10px;
+            border: 2px solid rgb(155, 85, 0);
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(227, 200, 157);
+        }
+    </style>
+</head>
+<body>
+      <h1>Fateful Quest</h1>
+      <div class="button button1" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+         <a href="s0-1-1.html">start adventure</a>
+      </div>
+      <div class="button button1" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+         <a href="about.html">about</a>
+      </div>
+</body>
+</html>

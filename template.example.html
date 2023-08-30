@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fateful Quest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EE4VDQSWY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5EE4VDQSWY');
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Dogica Pixel';
+            src: URL('dogicapixel.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Dogica Pixel Bold';
+            src: URL('dogicapixelbold.ttf') format('truetype');
+        }
+        html {
+            font-family: 'Dogica Pixel';
+            font-size: 15px;
+            line-height: 22px;
+            max-width: 430px;
+            margin: auto;
+        }
+        @media (max-width: 430px) {
+            html {
+                background-color: rgb(243, 240, 236);
+            }
+        }
+        @media not (max-width: 430px) {
+            html {
+                background-color: #ddd;
+            }
+            body {
+                background-color: rgb(243, 240, 236);
+            }
+        }
+        body {
+            touch-action: pan-x pan-y;
+            padding: 10px;
+            margin: 0;
+        }
+        p.bold {
+            font-family: 'Dogica Pixel Bold';
+        }
+        #image {
+            width: 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(155, 85, 0)
+        }
+        .button {
+            margin-bottom: 10px;
+            border: 2px solid rgb(155, 85, 0);
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(227, 200, 157);
+        }
+        .button1 {
+            border-color: rgb(150, 74, 212);
+            background-color: rgb(255, 153, 106);
+        }
+        .button1 a {
+            color: rgb(150, 74, 212);
+        }
+        .button2 {
+            border-color: rgb(255, 153, 106);
+            background-color: rgb(150, 74, 212);
+        }
+        .button2 a {
+            color: rgb(255, 153, 106);
+        }
+        .button3 {
+            border-color: rgb(199, 199, 199);
+            background-color: rgb(217, 31, 31);
+        }
+        .button3 a {
+            color: rgb(199, 199, 199);
+        }
+        .button4 {
+            border-color: rgb(217, 31, 31);
+            background-color: rgb(199, 199, 199);
+        }
+        .button4 a {
+            color: rgb(217, 31, 31);
+        }
+    </style>
+</head>
+<body>
+    <div style="display: none">
+        <p>You are presented with what feels like a fateful choice. Remembering the curse, you know that you must choose carefully.</p>
+        <p class="bold">Will you attempt to catch the insect?</p>
+        <p>Now, make your choice.</p>
+        <div class="button button1" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+            <a href="template.html">yes, this feels right</a>
+        </div>
+        <div class="button button2" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+            <a href="template.html">no, this feels wrong</a>
+        </div>
+        <img id="image" src="choice.png" />
+    </div>
+    <div style="display: none">
+        <p>Upon entering the temple, your eyes widen at the sight of intricate carvings on the walls depicting ancient civilizations and mythical creatures.</p>
+        <p>In one corner stands a statue of what seems like a deity with its hands outstretched towards the sky. Suddenly, a faint buzz fills the air as if some creature was approaching.</p>
+        <div class="button" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+            <a href="template.html">turn to the next page</a>
+        </div>
+        <img id="image" src="s1-1-1-pixel-1.png" />
+    </div>
+    <div style="display: block">
+        <p>Finally reaching the end of the text, you discover a horrifying prophecy predicting your demise if you attempt to leave the island without performing the ritual.</p>
+        <p>Despite knowing better, you decide to follow through with the ceremony out of sheer fascination for history. With every step towards completion, dread fills your heart until...</p>
+        <div class="button button3" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+            <a href="template.html">you died. try again?</a>
+        </div>
+        <div class="button button4" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+            <a href="template.html">hint</a>
+        </div>
+        <img id="image" src="s1-21-3-pixel-1.png" />
+    </div>
+    <div style="display: none">
+        <p>You admit to yourself that this quest may be a bit more than you can handle. You clear your mind and pray that some higher power is listening and willing to help.</p>
+        <p>A surprising image starts forming in your mind... Are you hallucinating about fortune cookies?!</p>
+        <p>Perhaps it would be wise to try capturing the insect.</p><p>Stepping through the door might lead to interesting experiences or discoveries.</p>
+        <div class="button" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+            <a href="template.html">try again</a>
+        </div>
+        <img id="image" src="hint.png" />
+    </div>
+</body>
+</html>

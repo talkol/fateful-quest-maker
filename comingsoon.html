@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fateful Quest</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5EE4VDQSWY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5EE4VDQSWY');
+    </script>
+    <style>
+        @font-face {
+            font-family: 'Dogica Pixel';
+            src: URL('dogicapixel.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Dogica Pixel Bold';
+            src: URL('dogicapixelbold.ttf') format('truetype');
+        }
+        html {
+            font-family: 'Dogica Pixel';
+            font-size: 15px;
+            line-height: 22px;
+            max-width: 430px;
+            margin: auto;
+        }
+        @media (max-width: 430px) {
+            html {
+                background-color: rgb(243, 240, 236);
+            }
+        }
+        @media not (max-width: 430px) {
+            html {
+                background-color: #ddd;
+            }
+            body {
+                background-color: rgb(243, 240, 236);
+            }
+        }
+        body {
+            touch-action: pan-x pan-y;
+            padding: 10px;
+            margin: 0;
+        }
+        p.bold {
+            font-family: 'Dogica Pixel Bold';
+        }
+        #image {
+            width: 100%;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(155, 85, 0)
+        }
+        .button {
+            margin-bottom: 10px;
+            border: 2px solid rgb(155, 85, 0);
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(227, 200, 157);
+        }
+    </style>
+</head>
+<body>
+    <p class="bold">Coming soon.</p>
+    <p>You're on the right track!</p>
+    <p>The next part of the story has not been published yet. Keep refreshing this page every few days until this message is replaced with the next scene.</p>
+    <div class="button" onclick="javascript: this.getElementsByTagName('a')[0].click()">
+        <a href="javascript: window.location.reload();">refresh</a>
+    </div>
+    <img id="image" src="comingsoon.png" />
+</body>
+</html>
