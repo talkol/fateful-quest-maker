@@ -265,7 +265,7 @@ Overall, in a section there are exactly 15 choices that lead to 16 possible endi
 
 You can see the good path colored in green. All the scenes are numbered, the endings are scenes 16-31. Remember the key `PositiveScene` in the prompt file `s1.in.json`? This is the scene number of the scene that leads to victory.
 
-If you don't like the synopsis, try generating again by running `python 1-synopsis.py s1` since ChatGPT has a random element in its resposnes. You can also try changing your prompt first.
+If you don't like the synopsis, try generating again by running `python 1-synopsis.py s1` since ChatGPT has a random element in its responses. You can also try changing your prompt `s1.in.json` first. In the prompt, you should mainly tweak the `Background` field to give a slightly different background to the story. If you want to take the generated plot in a specific direction, add some themes to the `Direction` field, like "time travel" or "horror".
 
 Once you like the synopsis, go over the 16 possible endings and choose the most interesting one. This should be your successful ending that leads to the next section. To change the successful ending, edit the file `s1\s1.in.json` and change `PositiveScene` to the number of the scene you want (the number must be between 16-31). Then run `python 2-scene-prompts.py s1` again and take a look at `s1\s1-scenes.out.html` in your browser again. The new scene should now be in green.
 
