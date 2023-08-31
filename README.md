@@ -212,7 +212,7 @@ These instructions will generate one section. The example given here is for sect
 For all sections except section 1, the prompt for generating the section is generated automatically by the previous section. For section 1 only, you will need to create the prompt manually. Run:
 
 ```
-mdir s1
+mkdir s1
 ```
 
 This will create the directory for section 1. Inside, create the file `s1.in.json` (so its path is `s1\s1.in.json`) with this content:
