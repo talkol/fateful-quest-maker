@@ -37,7 +37,8 @@ def generate_html(description, subscenetag, subscenetagyes, subscenetagno, type)
     titletag = titletag.replace("s", "")
     titletag = titletag.replace("-", ".")
     template = template.replace("{{title}}", titletag)
-    with open(f"out\\{subscenetag}.html", 'w') as outfile:
+    path = os.path.join('out', f'{subscenetag}.html')
+    with open(path, 'w') as outfile:
         outfile.write(template)
 
 def main():
@@ -51,7 +52,7 @@ def main():
 
     scenes = {}
     try:
-        filename = f"{dirname}\\{outprefix}-scenes.out.json"
+        filename = os.path.join(dirname, f'{outprefix}-scenes.out.json')
         scenes = load_json_from_file(filename)
         if not "Scene 1" in scenes:
             print(f"{filename} content does not contain 'Scene 1'")
@@ -66,14 +67,17 @@ def main():
         print(f"Error: File '{filename}' not found.")
     except json.JSONDecodeError:
         print(f"Error: '{filename}' is not a valid JSON file.")
-
-    file = open(f"{dirname}\\{outprefix}-hint.out.html", 'r')
+    path1 = os.path.join(dirname, f'{outprefix}-hint.out.html')
+    file = open(path1, 'r')
     hint = file.read()
     generate_html(hint, f"{outprefix}-hint", f"{outprefix}-1-1", f"{outprefix}-1-1", "hint")
 
-    files = glob.glob(f"{dirname}\\{outprefix}-*.out.txt")
+    path2 = os.path.join(dirname, f'{outprefix}-*.out.txt')
+    files = glob.glob(path2)
     for filename in files:
-        sceneprefix = (filename.split("\\")[1]).split(".")[0]
+        print(f'file name is {filename}')
+        filename_with_extension = os.path.basename(filename)
+        sceneprefix = os.path.splitext(filename_with_extension)[0].split(".")[0]
         index = int(sceneprefix.split("-")[1])
         if index == scenes["PositiveScene"]:
             continue
