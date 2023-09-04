@@ -51,7 +51,7 @@ def main():
         sys.exit(1)
 
     dirname = sys.argv[1]
-    filename = dirname + "\\" + dirname + ".in.json"
+    filename = os.path.join(dirname, f'{dirname}.in.json')
     outfilename = filename.split(".")[0] + ".out.json"
 
     try:

@@ -59,7 +59,7 @@ def main():
 
     scenes = {}
     try:
-        filename = f"{dirname}\\{outprefix}-scenes.out.json"
+        filename = os.path.join(dirname, f'{outprefix}-scenes.out.json')
         scenes = load_json_from_file(filename)
         if not "Scene 1" in scenes:
             print(f"{filename} content does not contain 'Scene 1'")
@@ -77,7 +77,7 @@ def main():
 
     positivescene = scenes["PositiveScene"]
 
-    bgfilename = f"{outprefix}\\{outprefix}-bgsummary.out.json"
+    bgfilename = os.path.join(outprefix, f'{outprefix}-bgsummary.out.json')
     if not os.path.isfile(bgfilename):
         toshorten = get_background(scenes, positivescene)
         call_chatgpt_api(toshorten, bgfilename)
@@ -90,7 +90,8 @@ def main():
     nextinput["Choice"] = scenes[f"Choice {positivescene}"]
     nextinput["PositiveScene"] = random.randrange(16, 32)
     nextinput["Direction"] = get_direction()
-    with open(f"{nextoutprefix}\\{nextoutprefix}.in.json", 'w') as nextinputfile:
+    path = os.path.join(nextoutprefix, f'{nextoutprefix}.in.json')
+    with open(path, 'w') as nextinputfile:
         json.dump(nextinput, nextinputfile, indent=4)
 
 if __name__ == "__main__":

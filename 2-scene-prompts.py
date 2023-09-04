@@ -2,6 +2,7 @@ import math
 import re
 import json
 import sys
+import os
 
 def load_json_from_file(filename):
     """Load and parse a JSON file."""
@@ -131,7 +132,7 @@ def main():
         sys.exit(1)
 
     dirname = sys.argv[1]
-    filename = dirname + "\\" + dirname + ".in.json"
+    filename = os.path.join(dirname, f'{dirname}.in.json')
     outprefix = filename.split(".")[0]
     outfilename = outprefix + ".out.json"
 
