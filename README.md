@@ -88,7 +88,7 @@ The scripts and resources after intallation are set to create my [example quest]
 
 `\` **(root of the project)**<br>This contains the Python scripts to generate the content. It also contains some static files you may want to edit like the favicon, images for home, hints and the choice screen.
 
-`out\` **(out directory)**<br>The HTML output of your entire process will be generated here. You will publish the contents of this directory so other people can enjoy your quest. I normally make this diretory a git repo since I push it directly to Github Pages.
+`out\` **(out directory)**<br>The HTML output of your entire process will be generated here. You will publish the contents of this directory so other people can enjoy your quest. I normally make this directory a git repo since I push it directly to Github Pages.
 
 `s0\` **(s0 directory)**<br>Content for section 0 of the quest. This is the prologue of the quest, you will probably edit this manually to match your story.
 
